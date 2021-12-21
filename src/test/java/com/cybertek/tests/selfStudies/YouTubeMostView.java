@@ -42,7 +42,16 @@ public class YouTubeMostView {
         Thread.sleep(1500);
 
         ArrayList<WebElement> views = new ArrayList<>(driver.findElements(By.xpath("//*[@id='metadata-line']/span[contains(text(), 'görüntüleme')]")));
-        String[] viewCount = new String[views.size()];
+
+        int size=0;
+
+        for(int i=0; i< views.size(); i++){
+            if(!views.get(i).getText().isBlank()){
+                size++;
+            }
+        }
+
+        String[] viewCount = new String[size];
 
         int x=0;
         for(int i=0; i<views.size(); i++){
