@@ -37,9 +37,6 @@ public class YouTubeVideoSearch {
         Thread.sleep(2000);
 
         driver.findElement(By.xpath("//button[@class='ytp-fullscreen-button ytp-button']")).click();
-        Thread.sleep(7000);
-        driver.findElement(By.xpath("//button[@class='ytp-ad-skip-button ytp-button']")).click();
-        Thread.sleep(7000);
-        driver.findElement(By.xpath("//button[@class='ytp-ad-skip-button ytp-button']")).click();
+
     }
 }
