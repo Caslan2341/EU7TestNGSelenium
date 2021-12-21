@@ -32,7 +32,7 @@ http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx
     }
 
     @Test
-    public void test1() throws InterruptedException {
+    public void test1(){
 
         driver.get("http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
 
@@ -54,7 +54,7 @@ http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx
 
 
         ArrayList<WebElement> checkBoxInitial = new ArrayList<>(driver.findElements(By.cssSelector("input[type='checkbox']")));
-        int size = checkBoxInitial.size();
+
 
         for (int i=2; i<=9; i++){
 

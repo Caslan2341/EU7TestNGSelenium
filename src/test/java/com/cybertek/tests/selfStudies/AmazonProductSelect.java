@@ -38,7 +38,7 @@ public class AmazonProductSelect {
         ArrayList<WebElement> searchingItems = new ArrayList<>(driver.findElements(By.xpath("//a[starts-with(@href,'/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_aps_sr_pg1_1?ie=')]")));
 
         Random num = new Random();
-        searchingItems.get(num.nextInt(0,searchingItems.size())).click();
+        searchingItems.get(num.nextInt(0,7)).click();
         Thread.sleep(1000);
 
 
