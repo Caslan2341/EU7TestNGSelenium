@@ -35,10 +35,10 @@ public class AmazonProductSelect {
         Thread.sleep(1000);
         searchBtn.click();
 
-        ArrayList<WebElement> searchingItems = new ArrayList<>(driver.findElements(By.xpath("//a[starts-with(@href,'/gp/slredirect/picassoRedirect.html/ref=pa_sp_atf_aps_sr_pg1_1?ie=')]")));
+        ArrayList<WebElement> searchingItems = new ArrayList<>(driver.findElements(By.xpath("//span[@class='a-size-medium a-color-base a-text-normal']/..")));
 
         Random num = new Random();
-        searchingItems.get(num.nextInt(0,7)).click();
+        searchingItems.get(num.nextInt(0,22)).click();
         Thread.sleep(1000);
 
 
