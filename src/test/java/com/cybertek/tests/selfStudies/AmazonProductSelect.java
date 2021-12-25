@@ -17,7 +17,7 @@ public class AmazonProductSelect {
 
     @BeforeMethod
     public void setUp(){
-        driver = WebDriverFactory.getDriver("chrome");
+        driver = WebDriverFactory.getDriver("firefox");
         driver.manage().window().maximize();
 
     }
@@ -38,13 +38,16 @@ public class AmazonProductSelect {
         ArrayList<WebElement> searchingItems = new ArrayList<>(driver.findElements(By.xpath("//span[@class='a-size-medium a-color-base a-text-normal']/..")));
 
         Random num = new Random();
-        searchingItems.get(num.nextInt(0,22)).click();
+        searchingItems.get(num.nextInt(0,searchingItems.size())).click();
         Thread.sleep(1000);
+
+        driver.findElement(By.xpath("//input[@id='buy-now-button']")).click();
+
 
 
     }
 
-   @AfterMethod
+  @AfterMethod
     public void tearDown() throws InterruptedException {
        Thread.sleep(4000);
         driver.quit();
