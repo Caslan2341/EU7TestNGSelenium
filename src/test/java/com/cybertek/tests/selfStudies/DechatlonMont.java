@@ -4,8 +4,11 @@ import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import javax.swing.*;
 
 public class DechatlonMont {
 
@@ -57,10 +60,15 @@ public class DechatlonMont {
 
 
         //min fiyat gir
-        /*driver.findElement(By.xpath("//input[@placeholder='240']")).click();
-        driver.findElement(By.xpath("//input[@placeholder='240']")).clear();
-        Thread.sleep(750);
-        driver.findElement(By.xpath("//input[@id='input-price-min']")).sendKeys("700");*/
+        Actions action = new Actions(driver);
+        driver.findElement(By.xpath("//input[@id='input-price-min']")).click();
+        action.doubleClick(driver.findElement(By.xpath("//input[@id='input-price-min']"))).perform();
+
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//input[@id='input-price-min']")).sendKeys("700");
+        driver.findElement(By.xpath("//span[text()='Fiyat']")).click();
+        Thread.sleep(2000);
+
 
         //ürünü seç
         driver.findElement(By.xpath("//div[@data-supermodelid='177091']")).click();
