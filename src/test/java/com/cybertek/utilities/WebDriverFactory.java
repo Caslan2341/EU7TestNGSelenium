@@ -28,12 +28,15 @@ public class WebDriverFactory {
                 driver = new OperaDriver();
                 break;
             case "safari":
-
-                driver = null;
+                WebDriverManager.safaridriver().setup();
+                driver = new SafariDriver();
                 break;
             case "edge":
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
+                break;
+            default:
+                driver = null;
                 break;
         }
         return driver;
