@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 public class WebDriverFactory {
 
@@ -28,12 +29,15 @@ public class WebDriverFactory {
                 driver = new OperaDriver();
                 break;
             case "safari":
-
-                driver = null;
+                WebDriverManager.safaridriver().setup();
+                driver = new SafariDriver();
                 break;
             case "edge":
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
+                break;
+            default:
+                driver = null;
                 break;
         }
         return driver;
