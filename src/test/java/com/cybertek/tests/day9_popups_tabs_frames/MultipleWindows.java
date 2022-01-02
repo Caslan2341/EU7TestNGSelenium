@@ -56,9 +56,9 @@ public class MultipleWindows {
     public void moreThan2Window(){
         driver.get("http://practice.cybertekschool.com/windows");
 
-        driver.findElement(By.linkText("Click Here")).click();
-
         System.out.println("Before Switch:"+driver.getTitle());
+
+        driver.findElement(By.linkText("Click Here")).click();
 
         Set<String> windowHandles = driver.getWindowHandles();
 
