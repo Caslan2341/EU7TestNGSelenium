@@ -24,11 +24,11 @@ public class TestAutomationHWQ8 {
         wait = new WebDriverWait(driver,10);
     }
 
-   /* @AfterMethod
+   @AfterMethod
     public void tearDown() throws InterruptedException {
         Thread.sleep(2000);
         driver.quit();
-    }*/
+    }
 
     @Test
     public void test1() throws InterruptedException {
