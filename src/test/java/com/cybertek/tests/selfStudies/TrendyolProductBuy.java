@@ -17,10 +17,10 @@ public class TrendyolProductBuy {
         driver.manage().window().maximize();
     }
 
-    /*@AfterMethod
+    @AfterMethod
     public void tearDown(){
         driver.quit();
-    }*/
+    }
 
     @Test
     public void test() throws InterruptedException {
@@ -64,6 +64,9 @@ public class TrendyolProductBuy {
         }*/
 
         driver.findElement(By.xpath("//div[contains(text(), 'Sepete Ekle')]/..")).click();
-
+        Thread.sleep(2000);
+        driver.findElement(By.linkText("Sepetim")).click();
+        Thread.sleep(2000);
+        //driver.findElement(By.xpath("//i[@class='i-trash']")).click();
     }
 }
