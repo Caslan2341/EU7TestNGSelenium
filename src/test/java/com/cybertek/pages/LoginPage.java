@@ -38,5 +38,12 @@ public class LoginPage {
         loginBtn.click();
     }
 
+    public void loginAsDriver(){
+        String username = ConfigurationReader.get("driver_username");
+        String password = ConfigurationReader.get("driver_password");
+
+        login(username, password);
+    }
+
 
 }
