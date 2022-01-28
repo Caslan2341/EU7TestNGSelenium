@@ -2,7 +2,7 @@ package com.cybertek.tests.day12_properties_driver_tests;
 
 import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.Driver;
-import io.netty.util.concurrent.SingleThreadEventExecutor;
+//import io.netty.util.concurrent.SingleThreadEventExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
