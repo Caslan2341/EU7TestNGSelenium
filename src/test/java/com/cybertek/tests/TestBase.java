@@ -64,6 +64,12 @@ public class TestBase {
         driver.get(ConfigurationReader.get("url"));
     }
 
+    @AfterTest
+    public void tearDownTest(){
+        //this is when the report is actually created
+        report.flush();
+    }
+
     @AfterMethod
     public void tearDown(ITestResult result) throws InterruptedException, IOException {
         //if test fails
@@ -85,9 +91,5 @@ public class TestBase {
             Driver.closeDriver();
         }
     }
-    @AfterTest
-    public void tearDownTest(){
-        //this is when the report is actually created
-        report.flush();
-    }
+
 }
